@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Portfolio</title>
     <!--Bootstrap-->
-    <script href="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/less/bootstrap.less">
-    <script href="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
     <!--Roboto font-->
@@ -14,22 +14,71 @@
     <link rel="stylesheet" href="bower_components/roboto-fontface/css/roboto-condensed/roboto-condensed-fontface.css">
     <link rel="stylesheet" href="bower_components/roboto-fontface/fonts/roboto/*.*">
     <link rel="stylesheet" href="bower_components/roboto-fontface/fonts/roboto-condensed/*.*">
+    <!-- fullpage -->
+    <link rel="stylesheet" href="bower_components/fullpage.js/dist/jquery.fullpage.css">
+    <script type="text/javascript" src="bower_components/fullpage.js/dist/jquery.fullpage.js"></script>
+    <!-- Less -->
+    <link rel="stylesheet/less" href="less-style.less" type="text/css">
+    <script type="text/javascript" src="bower_components/less/dist/less.js"></script>
     <!--Custom styles-->
     <link href="style.css" rel="stylesheet">
+
+
+    <script>
+        jQuery(document).ready(function($) {
+            $("#fullpage").fullpage({
+                sectionsColor: ['#c4d7ea', 'green', '#fff', '#000000'],
+                anchors:['firstSection','secondSection','thirdSection','fourthSection'],
+                menu:'#menu',
+                navigation: true,
+                navigationPosition: 'left',
+                navigationTooltips: ['Start', 'Design','UX','Front-end', 'Management'],
+                showActiveTooltip: true,
+            });
+        });
+    </script>
 </head>
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid header">
             <div class="row">
                 <div class="navbar navbar-inverse">
                     <div class="container">
-                        <div class="navbar-header"><a href="#" class="navbar-brand">PixelPusher</a></div>
-                        <div class="collapse navbar-collapse"></div>
+                        <div class="navbar-header"><a href="#" class="navbar-brand"><span class="logo">P</span><span>ixel-</span>Pusher</a></div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Ux</a></li>
+                                <li><a href="#">Front-end</a></li>
+                                <li><a href="#">Management</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
     </div>
+    
+   <!-- <div class="menu-vertical">
+        <ul id="menu">
+            <li data-menuanchor="firstSection"><a href="#firstSection">1 пункт</a></li>
+            <li data-menuanchor="secondSection"><a href="#secondSection">2 пункт</a></li>
+            <li data-menuanchor="thirdSection"><a href="#thirdSection">3 пункт</a></li>
+            <li data-menuanchor="fourthSection"><a href="#fourthSection">4 пункт</a></li>
+        </ul>
+    </div> -->
 
+    <div id="fullpage">
+        <div class="section image-1">
+        </div>
+        <div class="section image-2">
+        </div>
+        <div class="section image-3">
+        </div>
+        <div class="section image-4">
+        </div>
+        <div class="section image-4">
+        </div>
+    </div>
 
 </body>
 </html>
